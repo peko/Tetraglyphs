@@ -5,7 +5,7 @@ nib     = require "nib"
 http    = require "http" 
 coffee  = require "coffee-middleware"
 
-port = 3000
+port = 3030
 
 app = express()
 srv = http.Server app
@@ -42,4 +42,6 @@ io.on "connection", (socket)->
     socket.emit "news", helllo: "world"
     socket.on "hello", (data)->
         console.log data
+
+console.log __dirname
 

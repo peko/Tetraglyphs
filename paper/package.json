@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^3.3.5",
-    "coffee-middleware": "^0.3.0",
+    "coffee-middleware": "~0.3.0",
     "express": "^4.13.0",
     "iced-coffee-script": "^1.8.0-e",
     "jade": "^1.11.0",
