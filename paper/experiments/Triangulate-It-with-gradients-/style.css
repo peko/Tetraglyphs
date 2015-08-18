@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background: #ffd;
+  font: 30px sans-serif;
+  /* overflow:hidden; */
+}
+
+body, html, canvas, svg {
+    width : 4096px;
+    height: 4096px;
+}
+
+canvas, svg {
+    left:0px;
+    top:0px;
+    position: absolute;
+}
