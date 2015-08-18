@@ -35,7 +35,7 @@ class Tetra extends Group
             applyMatrix: false
 
         @position = p
-        
+
     drawable:=>
 
         @c = colors[(cid++)%colors.length]
@@ -64,10 +64,10 @@ class Tetra extends Group
 
         R = @R/2
 
-        @addChild new Tetra(R, [   R/S2,   R/S2])#.rotate(180)
-        @addChild new Tetra(R, [  -R/S2,   R/S2])#.rotate(-90)
         @addChild new Tetra(R, [  -R/S2,  -R/S2])#.rotate(  0)
         @addChild new Tetra(R, [   R/S2,  -R/S2])#.rotate( 90)
+        @addChild new Tetra(R, [  -R/S2,   R/S2])#.rotate(-90)
+        @addChild new Tetra(R, [   R/S2,   R/S2])#.rotate(180)
         
         @subdivided = true
 
@@ -104,7 +104,7 @@ class Tetra extends Group
                 t = @children[i/4|0].children[i%4]
                 t.drawable()
 
-                if v is "0"
+                if v is "1"
                     t.t.fillColor = t.c
                 # else
                 #     t.t.fillColor = "white"

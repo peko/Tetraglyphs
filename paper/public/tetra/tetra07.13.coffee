@@ -9,14 +9,14 @@ TR = 256
 String::rpt = (n) -> Array(n+1).join(this)
 
 colors = [
-    # "#2E0927"
-    # "#D90000"
-    # "#FF2D00"
-    # "#FF8C00"
-    # "#04756F"
+    "#2E0927"
+    "#D90000"
+    "#FF2D00"
+    "#FF8C00"
+    "#04756F"
 # ]
 # colors = [
-    "#004358"
+    # "#004358"
     # "#1F8A70"
     # "#BEDB39"
     # "#FFE11A"
@@ -35,14 +35,14 @@ class Tetra extends Group
             applyMatrix: false
 
         @position = p
-        
+
     drawable:=>
 
         @c = colors[(cid++)%colors.length]
-        @w = @R/Math.pow(1.618,5)
+        @w = @R/Math.pow(1.618,3)
         # @w = 2 if @w<2
         @t = new Path.RegularPolygon
-            radius     : @R-@w*0.5
+            radius     : @R-@w
             pivot      : [0,0]
             sides      :  4
             strokeColor: @c
@@ -64,10 +64,10 @@ class Tetra extends Group
 
         R = @R/2
 
-        @addChild new Tetra(R, [   R/S2,   R/S2])#.rotate(180)
-        @addChild new Tetra(R, [  -R/S2,   R/S2])#.rotate(-90)
-        @addChild new Tetra(R, [  -R/S2,  -R/S2])#.rotate(  0)
-        @addChild new Tetra(R, [   R/S2,  -R/S2])#.rotate( 90)
+        @addChild new Tetra(R, [  -R/S2,  -R/S2]).rotate(180)
+        @addChild new Tetra(R, [   R/S2,  -R/S2]).rotate(-90)
+        @addChild new Tetra(R, [  -R/S2,   R/S2]).rotate( 90)
+        @addChild new Tetra(R, [   R/S2,   R/S2]).rotate(  0)
         
         @subdivided = true
 
@@ -104,11 +104,12 @@ class Tetra extends Group
                 t = @children[i/4|0].children[i%4]
                 t.drawable()
 
-                if v is "0"
+                if v is "1"
                     t.t.fillColor = t.c
+                    t.t.opacity = 1 
                 # else
                 #     t.t.fillColor = "white"
-                t.t.opacity = 1
+                # t.t.opacity = 1
 
             # for i in ia
 
