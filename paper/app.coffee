@@ -33,9 +33,14 @@ app.use coffee
 
 app.use express.static "#{__dirname}/public"
 
-app.get "/:id", (req,res)->
-    res.render "index",
-        title: "index"
+app.get "/paper/:id", (req,res)->
+    res.render "paper",
+        title: "paper"
+        id   : req.params.id
+
+app.get "/math/:id", (req,res)->
+    res.render "math",
+        title: "math"
         id   : req.params.id
 
 io.on "connection", (socket)->
