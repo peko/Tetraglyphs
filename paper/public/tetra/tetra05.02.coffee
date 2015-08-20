@@ -55,6 +55,7 @@ class Tetra extends Group
             sides      :  3
             # strokeColor: @c
             # strokeWidth: @w
+            # fillColor  : @c
             opacity    : 0.0
 
         @addChild @t
