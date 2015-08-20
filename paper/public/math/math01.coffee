@@ -108,11 +108,8 @@ translate = (text)->
     formula.join().replace(/,/g,'').replace(/\|/g,',')
     
 
-
-
-
-
 MathJax.Hub.Queue ()->
+    
     math = MathJax.Hub.getAllJax("output")[0]
   
     updateFormula = ->
