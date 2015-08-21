@@ -1,5 +1,5 @@
 # Tetraglyphs
-Binary packing with shape fractalisation
+Binary packing with shape fractalization
 
 * http://vs43.ailove.ru:3030/paper/01
 * http://vs43.ailove.ru:3030/paper/02
