@@ -3,7 +3,7 @@ Binary packing with shape fractalisation
 
 * http://vs43.ailove.ru:3030/paper/01
 * http://vs43.ailove.ru:3030/paper/02
-* http://vs43.ailove.ru:3030/paper/03
+* http://vs43.ailove.ru:3030/paper/04
 * http://vs43.ailove.ru:3030/paper/05.02 (01, 02, ..., 06)
 * http://vs43.ailove.ru:3030/paper/07.01 (01, 02, ..., 20)
 
